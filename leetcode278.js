@@ -23,8 +23,6 @@
         
         while (left < right) {
             const mid = Math.floor(left + ((right - left) / 2));
-            
-            console.log(mid);
         
             if (isBadVersion(mid)) {
                 right = mid;
