@@ -8,7 +8,6 @@
     }
 
     const lowerCasedString = s.replace(/\W|_/g, '').toLowerCase();
-    console.log(lowerCasedString);
     const len = lowerCasedString.length;
     const mid = len / 2;
 
