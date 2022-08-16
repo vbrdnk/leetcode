@@ -2,7 +2,9 @@
  * @param {number[]} nums
  * @return {number[]}
  */
- var findDuplicates = function(nums) {
+ const findDuplicates = function(nums) {
+    // O(n) runtime but 1 scan
+    // O(1) constant space if not inclusive result
     const result = [];
 
     for (let i = 0; i < nums.length; i++) {
@@ -17,5 +19,20 @@
     }
 
     return result;
-    
 };
+
+  // O(n) runtime, 1 scan and 1 filtering
+  // O(n) space
+ const findDuplicates2 = function(nums) {
+   const hashMap = {};
+
+   for (let num of nums) {
+     if (hashMap[num]) {
+       hashMap[num]++;
+     } else {
+       hashMap[num] = 1;
+     }
+   }
+
+   return Object.keys(hashMap).filter(key => hashMap[key] > 1);
+ }
