@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
- var runningSum = function(nums) {
+ var leetcode1480RunningSum = function(nums) {
     const runningSum = [];
     
     for (let i = 0; i < nums.length; i++) {
@@ -27,4 +27,4 @@ var runningSumInPlace = function(nums) {
     });
 };
 
-console.log(runningSum([1,2,3,4]));
+console.log(leetcode1480RunningSum([1,2,3,4]));
