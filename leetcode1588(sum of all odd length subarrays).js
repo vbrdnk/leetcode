@@ -8,7 +8,6 @@ const sumOddLengthSubarrays = function(arr) {
 
     for (let i = 0; i < n; i++) {
         let total = i * (n - i) + (n - i);
-        console.log(total);
         res += Math.ceil(total / 2) * arr[i];
 
     }
