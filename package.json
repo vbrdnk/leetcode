@@ -2,7 +2,7 @@
   "name": "leetcode",
   "version": "1.0.0",
   "description": "Leetcode problems solutions",
-  "main": "leetcode121.js",
+  "main": "solutions/leetcode121.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
