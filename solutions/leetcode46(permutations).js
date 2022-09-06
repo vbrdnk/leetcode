@@ -18,11 +18,10 @@ const permute = function(nums) {
             dfs(i + 1, slate);
             [nums[i], nums[j]] = [nums[j], nums[i]];
         }
-
-
-
     }
-    
+
     dfs(0, nums);
     return result;
 };
+
+console.log(permute([1,2,3]));
