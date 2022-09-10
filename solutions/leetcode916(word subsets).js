@@ -18,7 +18,7 @@ const wordSubsets = function (words1, words2) {
     let maxSubsetString = '';
 
     for (let key of Object.keys(map)) {
-        for (let i = 0; i < map[key]; i++) {
+        while(map[key]--) {
             maxSubsetString += key;
         }
     }
