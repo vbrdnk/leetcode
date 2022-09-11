@@ -29,6 +29,5 @@ const levelOrderBottom = function(root) {
             if (curr.right) queue.push(curr.right);
         }
     }
-
     return result.reverse();
 };
