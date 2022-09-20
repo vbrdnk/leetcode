@@ -12,7 +12,6 @@ const bubbleSort = function (nums) {
     }
 
     return nums;
-
 }
 
 console.log(bubbleSort([2, 5, 1, 8, 9, 7, 4, 6]));
