@@ -11,13 +11,30 @@
  * @return {number[]}
  */
  const postorderTraversal = function(root) {
-    if (!root) return [];
-    
-    // recursive solution
-    return postOrder(root);
+    if (!root) {
+        return [];
+    }
 
-    // recursive solution
-    // return !root ? [] : [...postorderTraversal(root.left), ...postorderTraversal(root.right), root.val];
+    const result = []
+
+    const firstStack = [root];
+    const secondStack = [];
+
+
+    while (firstStack.length) {
+        const curr = firstStack.pop();
+        secondStack.push(curr);
+
+        if (curr.left) firstStack.push(curr.left);
+        if (curr.right) firstStack.push(curr.right);
+    }
+
+    while (secondStack.length) {
+        const curr = secondStack.pop();
+        result.push(curr.val);
+    }
+
+    return result;
 };
 
 // recursive solution
@@ -25,15 +42,15 @@ const postorderTraversalRecursive = function(root) {
     if (!root) {
         return [];
     }
-    
+
     const result = [];
-    
+
     function postorder(node) {
         if (node.left) postorder(node.left);
         if (node.right) postorder(node.right);
         result.push(node.val);
     }
-    
+
     postorder(root);
     return result;
 };
