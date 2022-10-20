@@ -4,21 +4,20 @@
  * @return {number}
  */
 const numJewelsInStones = function(jewels, stones) {
-  const hashMap = {};
+  const hashSet = new Set();
+
+  for (let jewel of jewels) {
+    hashSet.add(jewel);
+  }
+
+  let count = 0;
 
   for (let stone of stones) {
-    if (!hashMap[stone]) {
-      hashMap[stone] = 1;
-    } else {
-      hashMap[stone]++;
+    if (hashSet.has(stone)) {
+      count++;
     }
   }
 
-  return jewels.split('').reduce((acc, jewel) => {
-    if (hashMap[jewel]) {
-      return acc + hashMap[jewel];
-    } else {
-      return acc;
-    }
-  }, 0);
+  return count;
 };
+
