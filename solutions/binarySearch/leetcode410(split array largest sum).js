@@ -15,7 +15,6 @@ const splitArray = function(nums, k) {
         let threshold = Math.floor(left + (right - left) / 2);
 
         if (minimumSubarraysRequired(nums, threshold) <= k) {
-            console.log(threshold, minimumSubarraysRequired(nums, threshold));
 
             right = threshold - 1;
             maxSum = threshold;
