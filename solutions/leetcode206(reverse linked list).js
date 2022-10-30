@@ -14,12 +14,12 @@
     let prev = null
     let next;
 
-    while (current) {
+    while (curr) {
         next = curr.next;
         curr.next = prev;
         prev = curr;
         curr = next;
     }
- 
+
     return prev;
 };
