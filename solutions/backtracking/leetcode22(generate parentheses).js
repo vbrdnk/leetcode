@@ -6,7 +6,6 @@ const generateParenthesis = function(n) {
     const ans = [];
 
     function backtrack(i, slate, openCount, closeCount) {
-        console.log(slate);
         // backtracking case
         if (openCount > n) {
             return;
