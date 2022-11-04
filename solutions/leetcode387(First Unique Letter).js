@@ -2,24 +2,20 @@
  * @param {string} s
  * @return {number}
  */
- const firstUniqChar = function(s) {
-    const hashtable = new Map();
-    
-    for (let letter of s) {
-        if (hashtable.has(letter)) {
-            hashtable.set(letter, hashtable.get(letter) + 1)
-        } else {
-            hashtable.set(letter, 1);
-        }
+const firstUniqChar = function(s) {
+    const map = new Map();
+
+    for (let char of s) {
+        map.set(char, (map.get(char) || 0) + 1);
     }
-    
-    
+
     for (let i = 0; i < s.length; i++) {
-        if (hashtable.get(s[i]) === 1) {
+        const char = s.charAt(i);
+
+        if (map.get(char) === 1) {
             return i;
         }
     }
-    
+
     return -1;
-    
 };

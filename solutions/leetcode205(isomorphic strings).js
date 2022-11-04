@@ -6,7 +6,7 @@
  const isIsomorphic = function(s, t) {
     let hashMap = {};
     const set = new Set();
-    
+
     for (let i = 0; i < s.length; i++) {
         const char1 = s.charAt(i);
         const char2 = t.charAt(i);
@@ -25,7 +25,6 @@
             set.add(char2);
         }
     }
-    
 
     return true;
 };
