@@ -21,7 +21,7 @@
         }
 
 
-        // dfs recurise case
+        // dfs recursive case
         for (let j = i; j < candidates.length; j++) {
             slate.push(candidates[j]);
             dfs(j, candidates, target - candidates[j], slate);
