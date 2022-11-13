@@ -14,7 +14,7 @@ const sumOfLeftLeaves = function(root) {
     let ans = 0;
 
     function dfs(node, isLeft) {
-        if (isLeft && !node.left && !node.right) {
+        if (isLeft && isLeafNode(node)) {
             ans += node.val;
         }
 
@@ -25,3 +25,11 @@ const sumOfLeftLeaves = function(root) {
     dfs(root, false);
     return ans;
 };
+
+/**
+ * @param {TreeNode} node
+ * @return {boolean} - Returns true if node is a leaf node, false if it is not
+ */
+function isLeafNode(node) {
+    return !node.left && !node.right;
+}
