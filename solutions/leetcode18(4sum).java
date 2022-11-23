@@ -1,3 +1,9 @@
+import java.util.Set;
+import java.util.List;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.ArrayList;
+
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
